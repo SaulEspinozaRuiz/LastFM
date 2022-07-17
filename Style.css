@@ -1,0 +1,140 @@
+body {
+	background-color: rgba(255, 255, 255, 0);
+	font-family: 'Dosis', sans-serif;
+	color: #000000;
+}
+
+#widget {
+	display: flex;
+}
+
+#img {
+	width: 220px;
+	height: 220px;
+}
+
+#image {
+	position: relative;
+	z-index: 999;
+	height: 0px;
+	width: 0px;
+	object-fit: contain;
+	border-radius: 12px;
+	background-color: rgb(0, 0, 0);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+		rgba(0, 0, 0, 0.1) 0px 2px 4px 0px rgba(255, 255, 255, 0.05) 0px 0px 0px 1px
+			inset;
+	width: 100%;
+	height: 100%;
+}
+
+#songInfoContainer {
+	position: relative;
+	display: flex;
+	height: 150px;
+	width: 400px;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 12px 100px 12px 50px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: rgb(0, 0, 0) 0px 12px 28px 0px, rgba(0, 0, 0, 0.9) 0px 2px 4px 0px,
+		rgba(0, 0, 0, 0.9) 0px 0px 0px 1px inset;
+	margin-top: 20px;
+	margin-left: 0px;
+	animation-name: legacy;
+	animation-duration: 4s;
+	animation-iteration-count: initial;
+}
+
+#track {
+	margin: 0;
+	padding: 0;
+	font-size: 36px;
+	max-width: 400;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	z-index: 10;
+	color: rgb(255, 255, 255);
+	text-shadow: rgb(0, 0, 0) -2px -2px;
+}
+
+#artist {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	color: #ffffff;
+	position: relative;
+	z-index: 10;
+	text-shadow: rgb(0, 0, 0) -1px -2px;
+}
+
+#album {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	color: #ffffff;
+	position: relative;
+	z-index: 10;
+	text-shadow: rgb(0, 0, 0) -1px -2px;
+}
+
+#background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: blur(8px) grayscale(25%);
+	opacity: 100%;
+	background-size: cover;
+	background-position: center;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	z-index: 2;
+	background-color: #000000;
+}
+
+#temporalContainer {
+	position: relative;
+	display: flex;
+	height: 150px;
+	width: 400px;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 12px 100px 12px 50px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: rgb(0, 0, 0) 0px 12px 28px 0px, rgba(0, 0, 0, 0.9) 0px 2px 4px 0px,
+		rgba(0, 0, 0, 0.9) 0px 0px 0px 1px inset;
+	margin-top: 20px;
+	margin-left: -990px;
+	animation-name: paAtras;
+	animation-duration: 4s;
+	animation-iteration-count: initial;
+}
+
+.Marquee-container {
+	z-index: 1000;
+}
+
+@keyframes legacy {
+	from {
+		margin-left: -990px;
+	}
+	to {
+		margin-left: 0px;
+	}
+}
+
+@keyframes paAtras {
+	from {
+		margin-left: 0px;
+	}
+	to {
+		margin-left: -990px;
+	}
+}
